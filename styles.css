@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+    --white : #fff;
+    --bg-3 :#354259;
+    --bg-4 :#7D9D9C;
+    --bg :  #c2ded1;
+    --bg-2 :  #ece5c7;
+}
+
+
+/* #FEF6AA
+#D1DAE7
+#D3DFF1
+#A2B4CC
+#8E9CB3 */
+
+*{
+    padding: 0px ;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+.main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.container{
+    width: 850px;
+    border-radius: 10px;
+    padding: 30px 35px 35px;
+    background-color: var(--bg-2);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.container.disable :where(.editor-panel,.reset-filter,.Save-img){
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.container h2{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wrapper{
+    display: flex;
+    margin: 20px 0px;
+    min-height: 35px;
+}
+.editor-panel{
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-3);
+}
+
+.editor-panel .title{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.options,.controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.editor-panel button{
+    height: 40px;
+    font-size: 14px;
+    background-color: var(--bg-3s);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    color: var(--bg-3);
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--bg-3);
+}
+
+/* .filter button:hover, .filter button:active{
+    background-color: var(--bg-3);
+    color: var(--bg-4);
+} */
+
+.filter button.active{
+    background-color: var(--bg-3);
+    color: var(--white);
+}
+
+.editor-panel .filter button{
+    width: calc(100% /2 - 4px);
+}
+
+.editor-panel .rotate button{
+    width: calc(100% /4 - 3px);
+}
+
+.slider{
+    margin-top: 12px;
+}
+
+.slider .filter-info{
+    display: flex;
+    /* color: var(--bg-3); */
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.slider input{
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    accent-color: var(--bg-3);
+}
+
+.rotate{
+    margin-top: 17px;
+}
+
+.rotate button:nth-child(3),
+.rotate button:nth-child(4){
+    font-size: 18px;
+}
+
+.preview-img{
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.preview-img img{
+    max-width: 495px;
+    max-height: 335px; 
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.controls button{
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.controls .reset-filter{
+    background-color: var(--bg-3s);
+    color: var(--bg-3);
+    border: 1px solid var(--bg-3);
+    cursor: pointer;
+}
+.controls .choose-img{
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--bg-3);
+    border: 1px solid var(--bg-3);
+}
+.controls .Save-img{
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: var(--bg-3s);
+    color: var(--bg-3);
+    border: 1px solid var(--bg-3);
+}
+footer{
+    color: var(--bg-3);
+}
+.copyright-div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .footer-ui-links{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-li-links{
+    color: inherit;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 760px){
+    .container{
+        padding: 25px;
+    }
+    .wrapper{
+        flex-wrap: wrap-reverse;
+    }
+    .editor-panel{
+        margin-top: 5px;
+        width:100%;
+    }
+    .preview-img{
+        width: 100%;
+        margin: 0 0 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .controls button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .row{
+        width: 100%;
+    }
+    .controls .Save-img{
+        margin-left: 0px;
+    }
+}

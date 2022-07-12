@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrayScale by Dhairya</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="./img/GS.png" type="image/x-icon"> 
+</head>
+<body>
+    <div class="main">
+        <div class="container disable">
+            <h2>Gray<span>Scale</span></h2>
+            <div class="wrapper">
+                <div class="editor-panel">
+                    <div class="filter">
+                        <label class="title">Filters</label>
+                        <div class="options">
+                            <button id="Brightness"  class="active">Brightness</button>
+                            <button id = "Saturation" >Saturation</button>
+                            <button id = "Inversion" >Inversion</button>
+                            <button id="GrayScale">GrayScale</button>
+                        </div>
+                        <div class="slider">
+                            <div class="filter-info">
+                                <p class="name">Brightness</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200"> 
+                        </div>
+                    </div>
+                    <div class="rotate">
+                        <label class="title">Rotate & Flip</label>
+                        <div class="options">
+                            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="vertical"><i class= "bx bx-reflect-vertical"></i></button>
+                            <button id="horizontal"><i class="bx bx-reflect-horizontal"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-img">
+                    <img src="img/bg.png" alt="Upload here">
+                </div>
+            </div>
+            <div class="controls">
+                <button class="reset-filter">Reset Filters</button>
+                <div class="row">
+                    <input type="file" class="file-input" accept="image/*" hidden>
+                    <button class="choose-img">Choose Image</button>
+                    <button class="Save-img">Save Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright-div">
+                @dhairya trivedi .All right reserved. 2022.
+        </div>
+        <div class="links-div">
+            <ul class="footer-ui-links">
+                <li><a href="https://github.com/connect-dhairya/" class="footer-li-links">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/dhairya-trivedi-769006235/" class="footer-li-links">Linkedin</a></li>
+                <li><a href="mailto:connect.dhairya1@gmail.com" class="footer-li-links">Mail</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
